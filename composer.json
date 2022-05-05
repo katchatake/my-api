@@ -1,0 +1,15 @@
+{
+    "name": "francisco/my-api",
+    "description": "My custom API",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [{
+        "name": "Francisco Javier"
+    }],
+    "require": {}
+}
