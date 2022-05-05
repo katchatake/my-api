@@ -7,7 +7,7 @@ class Router
     protected $urls = ['urls' => [], 'groups' => [], 'errors' => [
         'url' => '/error',
         'method' => 'GET',
-        'controller' => ['App\Http\Controllers\ErrorController', 'index'],
+        'controller' => ['App\Controllers\ErrorController', 'index'],
         'params' => []
     ]];
     protected $stat = -1;
