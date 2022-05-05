@@ -11,5 +11,7 @@
     "authors": [{
         "name": "Francisco Javier"
     }],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
 }
