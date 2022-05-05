@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Core\Response;
 use Core\Request;
+use App\Models\UsersModel;
 
 class HomeController
 {
@@ -22,9 +23,8 @@ class HomeController
   public function dump()
   {
     $res = new Response();
-    $request = new Request();
-    // $db = new UsersModel();
-    // $res->sendJson([$db->getUsers(),$request->getPost('number')]);
+    $db = new UsersModel();
+    $res->sendJson($db->getUsers());
     // var_dump($array);
   }
 
