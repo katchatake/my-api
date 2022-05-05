@@ -7,14 +7,14 @@ use Core\Request;
 
 class HomeController
 {
-  public function index($id,$name)
+  public function index()
   {
     //return view('home');
     // $query = new UsersModel();
     // $data = $query->getUsers();
     $array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     $res = new Response();
-    $res->sendJson([$id,$name]);
+    $res->sendJson($array);
     // $response->send();
     // return json($id);
     // var_dump($array);
