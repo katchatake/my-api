@@ -23,8 +23,11 @@ class HomeController
   public function dump()
   {
     $res = new Response();
-    $db = new UsersModel();
-    $res->sendJson($db->getUsers());
+    $req = new Request();
+    // $db = new UsersModel();
+    $array = $req->getPost("name");
+    $res->sendJson([$array]);
+    // $res->sendJson($db->getUsers());
     // var_dump($array);
   }
 

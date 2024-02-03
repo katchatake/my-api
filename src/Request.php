@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use Core\Log;
+
 class Request
 {
     protected $url;
@@ -21,6 +23,11 @@ class Request
         return $_GET;
     }
     public function getPost($name){
-        return $_POST[$name];
+        $data = (empty($_POST)) ? json_decode(file_get_contents('php://input'), true) : $_POST;
+        $log = new Log(__CLASS__);
+        $log->setValues($data);
+        // $log->setValues($data[$name]);
+        $valid = (!empty($data[$name])) ? $data[$name] : "Doesn't existe this valu";
+        return $valid;
     }
 }
